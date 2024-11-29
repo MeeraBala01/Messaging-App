@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Messaging App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="sidebar">
+        <header class="sidebar-header">
+          <h2>Contacts</h2>
+          <div class="add-contact">
+            <input type="text" id="contact-name" placeholder="Add Contact" />
+            <button id="add-contact" onclick="addContact()">Save</button>
+          </div>
+        </header>
+        <ul id="contacts-list" class="contacts"></ul>
+      </div>
+
+      <div class="chat-area">
+        <header class="chat-header">
+          <h2 id="chat-title">Messages</h2>
+        </header>
+        <div id="message-history" class="message-history"></div>
+        <div class="message-input">
+          <!-- <form> -->
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type a message..."
+          />
+          <button type="submit" onclick="sendMessage()" id="send-message">
+            Send
+          </button>
+        </div>
+        <!-- </form> -->
+      </div>
+    </div>
+    <script src="/src/main.ts"></script>
+  </body>
+</html>
